@@ -25,7 +25,10 @@ def print_staff_report(location, staff_dict):
 
 for location, staff in staff.items():
   try:
-      print_staff_report(location, staff)
-  # Write your code below:
-  except:
-      print('Could not print sales report for ' + location)
+    print_staff_report(location, staff)
+  # especting zerodivisionerror
+  except ZeroDivisionError as e:
+    print('Could not print sales report for ' + location)
+    # Checkpoint 2
+    print(e)
+
